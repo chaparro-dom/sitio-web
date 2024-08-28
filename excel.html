@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso Intensivo de Excel</title>
+    <link rel="icon" href="img/ICATI.png" type="image/png">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- AdminLTE CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@3.1/dist/css/adminlte.min.css">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        .dark-mode {
+            background-color: #343a40;
+            color: #ffffff;
+        }
+        .dark-mode .card {
+            background-color: #454d55;
+            color: #ffffff;
+        }
+        .dark-mode .navbar {
+            background-color: #343a40 !important;
+        }
+        .dark-mode .main-footer {
+            background-color: #343a40;
+            color: #ffffff;
+        }
+        @media (max-width: 768px) {
+            .content-wrapper {
+                padding: 15px;
+            }
+            .card {
+                margin-bottom: 20px;
+            }
+        }
+        /* Colores para los iconos */
+        .fa-home { color: #4CAF50; }
+        .fa-file-excel { color: #217346; }
+        .fa-file-word { color: #2B579A; }
+        .fa-java { color: #007396; }
+        .fa-html5 { color: #E34F26; }
+        .fa-css3-alt { color: #1572B6; }
+        .fa-moon, .fa-sun { color: #FFA500; }
+        /* Estilo para hacer que los botones tengan el mismo tamaño */
+        .btn-equal-size {
+            height: 120px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        /* Nuevo estilo para alinear los card-body */
+        .card-body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body class="hold-transition sidebar-mini">
+    <div class="wrapper">
+        <!-- Navbar -->
+        <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+            <!-- Left navbar links -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+                </li>
+            </ul>
+            <!-- Right navbar links -->
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item mr-3">
+                    <button id="darkModeToggle" class="btn btn-secondary animate__animated animate__fadeIn">
+                        <i class="fas fa-moon"></i> Modo Oscuro
+                    </button>
+                </li>
+                <li class="nav-item">
+                    <a href="contacto.html" class="btn btn-primary animate__animated animate__fadeIn">
+                        <i class="fas fa-envelope"></i> Contáctanos
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Main Sidebar Container -->
+        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+            <!-- Brand Logo -->
+            <a href="index.html" class="brand-link">
+                <img src="img/ICATI.png" alt="Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+                <span class="brand-text font-weight-light"> Informática</span>
+            </a>
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <!-- Sidebar Menu -->
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">
+                                <i class="nav-icon fas fa-home"></i>
+                                <p>Inicio</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="excel.html" class="nav-link">
+                                <i class="nav-icon fas fa-file-excel"></i>
+                                <p>Excel</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="word.html" class="nav-link">
+                                <i class="nav-icon fas fa-file-word"></i>
+                                <p>Word</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="java.html" class="nav-link">
+                                <i class="nav-icon fab fa-java"></i>
+                                <p>Java</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="html.html" class="nav-link">
+                                <i class="nav-icon fab fa-html5"></i>
+                                <p>HTML</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="css.html" class="nav-link">
+                                <i class="nav-icon fab fa-css3-alt"></i>
+                                <p>CSS</p>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <div class="content-header">
+                <div class="container-fluid">
+                    <h1 class="m-0">Curso Intensivo de Excel</h1>
+                </div>
+            </div>
+
+            <!-- Main content -->
+            <section class="content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-8 col-md-12">
+                            <div class="card" id="fundamentos">
+                                <div class="card-header">
+                                    <h3 class="card-title">Fundamentos de Excel (Principiante)</h3>
+                                </div>
+                                <div class="card-body">
+                                    <ul>
+                                        <li>Introducción a Excel y su interfaz
+                                            <ul>
+                                                <li>Hojas de cálculo y celdas</li>
+                                                <li>Navegación y selección</li>
+                                                <li>Tipos de datos en Excel</li>
+                                            </ul>
+                                        </li>
+                                        <li>Fórmulas y funciones básicas
+                                            <ul>
+                                                <li>Operadores aritméticos</li>
+                                                <li>Funciones SUM, AVERAGE, MAX, MIN</li>
+                                                <li>Referencias relativas y absolutas</li>
+                                            </ul>
+                                        </li>
+                                        <li>Formato de celdas
+                                            <ul>
+                                                <li>Formato de números y fechas</li>
+                                                <li>Alineación y bordes</li>
+                                                <li>Estilos de celda predefinidos</li>
+                                            </ul>
+                                        </li>
+                                        <li>Gráficos básicos
+                                            <ul>
+                                                <li>Creación de gráficos simples</li>
+                                                <li>Tipos de gráficos: barras, columnas, circular</li>
+                                                <li>Personalización básica de gráficos</li>
+                                            </ul>
+                                        </li>
+                                        <li>Gestión de datos básica
+                                            <ul>
+                                                <li>Ordenar y filtrar datos</li>
+                                                <li>Autofiltro</li>
+                                                <li>Formato condicional básico</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <div class="mt-4">
+                                        <a href="excel basico.html" class="btn btn-primary">Ver Contenido del Curso</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <img src="img/excel basico.png" alt="Excel Principiante 1" class="level-image img-fluid mb-3" style="width: 100%; height: auto;">
+                                    <img src="img/excel basico2.png" alt="Excel Principiante 2" class="level-image img-fluid" style="width: 100%; height: auto;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row mt-4">
+                        <div class="col-lg-8 col-md-12">
+                            <div class="card" id="avanzado">
+                                <div class="card-header">
+                                    <h3 class="card-title">Excel Avanzado (Intermedio)</h3>
+                                </div>
+                                <div class="card-body">
+                                    <ul>
+                                        <li>Funciones avanzadas
+                                            <ul>
+                                                <li>VLOOKUP, HLOOKUP, INDEX-MATCH</li>
+                                                <li>Funciones lógicas (IF, AND, OR)</li>
+                                                <li>Funciones de texto y fecha</li>
+                                            </ul>
+                                        </li>
+                                        <li>Tablas dinámicas
+                                            <ul>
+                                                <li>Creación y manipulación de tablas dinámicas</li>
+                                                <li>Campos calculados y elementos calculados</li>
+                                                <li>Gráficos dinámicos</li>
+                                            </ul>
+                                        </li>
+                                        <li>Análisis de datos
+                                            <ul>
+                                                <li>Escenarios y búsqueda de objetivos</li>
+                                                <li>Solver</li>
+                                                <li>Análisis de sensibilidad</li>
+                                            </ul>
+                                        </li>
+                                        <li>Macros básicas
+                                            <ul>
+                                                <li>Grabación de macros</li>
+                                                <li>Ejecución y edición de macros</li>
+                                                <li>Asignación de macros a botones</li>
+                                            </ul>
+                                        </li>
+                                        <li>Formato y visualización avanzada
+                                            <ul>
+                                                <li>Formato condicional avanzado</li>
+                                                <li>Gráficos avanzados y sparklines</li>
+                                                <li>Validación de datos</li>
+                                            </ul>
+                                        </li> 
+                                    </ul>
+                                    <div class="mt-4">
+                                        <a href="excel intermedio.html" class="btn btn-primary">Ver Contenido del Curso</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-12">
+                            <div class="card">
+                                <div class="card-body d-flex flex-column align-items-center">
+                                    <img src="img/excel intermedio .png" alt="Excel Intermedio 1" class="level-image mb-4 img-fluid" style="width: 100%; height: auto;">
+                                    <img src="img/excel intermedio 2.png" alt="Excel Intermedio 2" class="level-image img-fluid" style="width: 100%; height: auto;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row mt-4">
+                        <div class="col-lg-8 col-md-12">
+                            <div class="card" id="moderno">
+                                <div class="card-header">
+                                    <h3 class="card-title">Excel Moderno y Optimización (Avanzado)</h3>
+                                </div>
+                                <div class="card-body">
+                                    <ul>
+                                        <li>Power Query y Gestión de Datos
+                                            <ul>
+                                                <li>Importación y transformación de datos</li>
+                                                <li>Combinación y limpieza de datos</li>
+                                                <li>Actualización automática y refrescado de datos</li>
+                                            </ul>
+                                        </li>
+                                        <li>Power Pivot y Modelado de Datos
+                                            <ul>
+                                                <li>Creación de modelos de datos relacionales</li>
+                                                <li>DAX (Data Analysis Expressions) avanzado</li>
+                                                <li>Diseño y implementación de KPIs</li>
+                                            </ul>
+                                        </li>
+                                        <li>Programación Avanzada con VBA
+                                            <ul>
+                                                <li>Programación orientada a objetos en VBA</li>
+                                                <li>Desarrollo de funciones personalizadas</li>
+                                                <li>Integración con otras aplicaciones de Office</li>
+                                            </ul>
+                                        </li>
+                                        <li>Automatización y Optimización de Procesos
+                                            <ul>
+                                                <li>Creación de dashboards dinámicos e interactivos</li>
+                                                <li>Optimización de rendimiento en fórmulas y macros</li>
+                                                <li>Implementación de seguridad y protección de datos</li>
+                                            </ul>
+                                        </li>
+                                        <li>Excel en Business Intelligence
+                                            <ul>
+                                                <li>Conexión y análisis de fuentes de datos externas</li>
+                                                <li>Integración entre Power BI Desktop y Excel</li>
+                                                <li>Creación, publicación y compartición de informes avanzados</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <div class="mt-4">
+                                        <a href="excel avanzado.html" class="btn btn-primary">Ver Contenido del Curso</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-12">
+                            <div class="card">
+                                <div class="card-body d-flex flex-column align-items-center">
+                                    <img src="img/excel avanzado.png" alt="Excel Avanzado - Power Query y Power Pivot" class="level-image mb-4 img-fluid" style="width: 100%; height: auto;">
+                                    <img src="img/vba.png" alt="Excel Avanzado - Dashboards y BI" class="level-image img-fluid" style="width: 100%; height: auto;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ... (rest of the content remains unchanged) ... -->
+
+                </div>
+            </section>
+        </div>
+
+        <!-- Main Footer -->
+        <footer class="main-footer">
+            <strong>&copy; 2023 Temario de Excel.</strong> Todos los derechos reservados.
+        </footer>
+    </div><!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="https://cdn.jsdelivr.net/npm/admin-lte@3.1/dist/js/adminlte.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Verificar si el modo oscuro está activado en localStorage
+            if (localStorage.getItem('darkMode') === 'true') {
+                $('body').addClass('dark-mode');
+                $('.navbar').addClass('navbar-dark').removeClass('navbar-light');
+                $('.card').addClass('bg-dark');
+                $('#darkModeToggle').html('<i class="fas fa-sun"></i> Modo Claro');
+            }
+
+            $('#darkModeToggle').click(function() {
+                $('body').toggleClass('dark-mode');
+                $('.navbar').toggleClass('navbar-dark navbar-light');
+                $('.card').toggleClass('bg-dark');
+                if ($('body').hasClass('dark-mode')) {
+                    $(this).html('<i class="fas fa-sun"></i> Modo Claro');
+                    localStorage.setItem('darkMode', 'true');
+                } else {
+                    $(this).html('<i class="fas fa-moon"></i> Modo Oscuro');
+                    localStorage.setItem('darkMode', 'false');
+                }
+            });
+
+            // Agregar animaciones al cargar la página
+            $('.animate__animated').each(function(i) {
+                var $this = $(this);
+                setTimeout(function() {
+                    $this.removeClass('animate__animated');
+                }, 100 * i);
+            });
+        });
+    </script>
+</body>
+</html>

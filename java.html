@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/ICATI.png" type="image/png">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- AdminLTE CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@3.1/dist/css/adminlte.min.css">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        .dark-mode {
+            background-color: #343a40;
+            color: #ffffff;
+        }
+        .dark-mode .card {
+            background-color: #454d55;
+            color: #ffffff;
+        }
+        .dark-mode .navbar {
+            background-color: #343a40 !important;
+        }
+        .dark-mode .main-footer {
+            background-color: #343a40;
+            color: #ffffff;
+        }
+        @media (max-width: 768px) {
+            .content-wrapper {
+                padding: 15px;
+            }
+            .card {
+                margin-bottom: 20px;
+            }
+        }
+        /* Colores para los iconos */
+        .fa-home { color: #4CAF50; }
+        .fa-file-excel { color: #217346; }
+        .fa-file-word { color: #2B579A; }
+        .fa-java { color: #007396; }
+        .fa-html5 { color: #E34F26; }
+        .fa-css3-alt { color: #1572B6; }
+        .fa-moon, .fa-sun { color: #FFA500; }
+        /* Animación para ocultar/mostrar el menú */
+        .sidebar-collapse .main-sidebar {
+            margin-left: -250px;
+            transition: margin-left 0.3s ease-in-out;
+        }
+        .main-sidebar {
+            transition: margin-left 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body class="hold-transition sidebar-mini">
+    <div class="wrapper">
+        <!-- Navbar -->
+        <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+            <!-- Left navbar links -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+                </li>
+            </ul>
+            <!-- Right navbar links -->
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item mr-3">
+                    <button id="darkModeToggle" class="btn btn-secondary animate__animated animate__fadeIn">
+                        <i class="fas fa-moon"></i> Modo Oscuro
+                    </button>
+                </li>
+                <li class="nav-item">
+                    <a href="contacto.html" class="btn btn-primary animate__animated animate__fadeIn">
+                        <i class="fas fa-envelope"></i> Contáctanos
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Main Sidebar Container -->
+        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+            <!-- Brand Logo -->
+            <a href="index.html" class="brand-link">
+                <img src="img/ICATI.png" alt="Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+                <span class="brand-text font-weight-light"> Informática</span>
+            </a>
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <!-- Sidebar Menu -->
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">
+                                <i class="nav-icon fas fa-home"></i>
+                                <p>Inicio</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="excel.html" class="nav-link">
+                                <i class="nav-icon fas fa-file-excel"></i>
+                                <p>Excel</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="word.html" class="nav-link">
+                                <i class="nav-icon fas fa-file-word"></i>
+                                <p>Word</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="java.html" class="nav-link">
+                                <i class="nav-icon fab fa-java"></i>
+                                <p>Java</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="html.html" class="nav-link">
+                                <i class="nav-icon fab fa-html5"></i>
+                                <p>HTML</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="css.html" class="nav-link">
+                                <i class="nav-icon fab fa-css3-alt"></i>
+                                <p>CSS</p>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <div class="content-header">
+                <div class="container-fluid">
+                    <h1 class="m-0">Curso Intensivo de Java</h1>
+                </div>
+            </div>
+
+            <!-- Main content -->
+            <section class="content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-8 col-md-12">
+                            <div class="card" id="fundamentos">
+                                <div class="card-header">
+                                    <h3 class="card-title">Fundamentos de Java (Principiante)</h3>
+                                </div>
+                                <div class="card-body">
+                                    <ul>
+                                        <li>Introducción a Java y su entorno
+                                            <ul>
+                                                <li>Historia y características de Java</li>
+                                                <li>JDK, JRE y JVM</li>
+                                                <li>Configuración del entorno de desarrollo</li>
+                                            </ul>
+                                        </li>
+                                        <li>Sintaxis básica y tipos de datos
+                                            <ul>
+                                                <li>Variables y constantes</li>
+                                                <li>Tipos primitivos y referencia</li>
+                                                <li>Operadores y expresiones</li>
+                                            </ul>
+                                        </li>
+                                        <li>Estructuras de control
+                                            <ul>
+                                                <li>Condicionales (if, else, switch)</li>
+                                                <li>Bucles (for, while, do-while)</li>
+                                                <li>Control de flujo (break, continue)</li>
+                                            </ul>
+                                        </li>
+                                        <li>Arrays y colecciones básicas
+                                            <ul>
+                                                <li>Arrays unidimensionales y multidimensionales</li>
+                                                <li>ArrayList y LinkedList</li>
+                                                <li>Iteración sobre colecciones</li>
+                                            </ul>
+                                        </li>
+                                        <li>Introducción a la Programación Orientada a Objetos
+                                            <ul>
+                                                <li>Clases y objetos</li>
+                                                <li>Métodos y atributos</li>
+                                                <li>Encapsulamiento y modificadores de acceso</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <div class="mt-4">
+                                        <a href="java basico.html" class="btn btn-primary">Ver Contenido del Curso</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-12">
+                            <div class="card">
+                                <div class="card-body d-flex flex-column align-items-center">
+                                    <img src="img/java principiantes.png" alt="Java Principiante 1" class="level-image mb-4 img-fluid" style="width: 100%; height: auto;">
+                                    <img src="img/historia de java.png" alt="Java Principiante 2" class="level-image img-fluid" style="width: 100%; height: auto;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row mt-4">
+                        <div class="col-lg-8 col-md-12">
+                            <div class="card" id="avanzado">
+                                <div class="card-header">
+                                    <h3 class="card-title">Java Avanzado (Intermedio)</h3>
+                                </div>
+                                <div class="card-body">
+                                    <ul>
+                                        <li>Programación Orientada a Objetos avanzada
+                                            <ul>
+                                                <li>Herencia y polimorfismo</li>
+                                                <li>Interfaces y clases abstractas</li>
+                                                <li>Sobrecarga y sobreescritura de métodos</li>
+                                            </ul>
+                                        </li>
+                                        <li>Manejo de excepciones
+                                            <ul>
+                                                <li>Try-catch-finally</li>
+                                                <li>Excepciones personalizadas</li>
+                                                <li>Propagación de excepciones</li>
+                                            </ul>
+                                        </li>
+                                        <li>Colecciones avanzadas
+                                            <ul>
+                                                <li>Set, Map y sus implementaciones</li>
+                                                <li>Comparators y Comparable</li>
+                                                <li>Generics</li>
+                                            </ul>
+                                        </li>
+                                        <li>Entrada/Salida y manejo de archivos
+                                            <ul>
+                                                <li>Streams de bytes y caracteres</li>
+                                                <li>Serialización de objetos</li>
+                                                <li>NIO (New I/O)</li>
+                                            </ul>
+                                        </li>
+                                        <li>Multithreading
+                                            <ul>
+                                                <li>Creación y gestión de hilos</li>
+                                                <li>Sincronización y comunicación entre hilos</li>
+                                                <li>Concurrencia básica</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <div class="mt-4">
+                                        <a href="java intermedio.html" class="btn btn-primary">Ver Contenido del Curso</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-12">
+                            <div class="card">
+                                <div class="card-body d-flex flex-column align-items-center">
+                                    <img src="img/java intermedio.png" alt="Java Intermedio 1" class="level-image mb-4 img-fluid" style="width: 100%; height: auto;">
+                                    <img src="img/java polimorfismo.png" alt="Java Intermedio 2" class="level-image img-fluid" style="width: 100%; height: auto;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row mt-4">
+                        <div class="col-lg-8 col-md-12">
+                            <div class="card" id="moderno">
+                                <div class="card-header">
+                                    <h3 class="card-title">Java Moderno y Frameworks (Avanzado)</h3>
+                                </div>
+                                <div class="card-body">
+                                    <ul>
+                                        <li>Características de Java moderno
+                                            <ul>
+                                                <li>Lambdas y Streams</li>
+                                                <li>Optional y nuevas APIs de fecha/hora</li>
+                                                <li>Módulos y JShell</li>
+                                            </ul>
+                                        </li>
+                                        <li>Programación funcional en Java
+                                            <ul>
+                                                <li>Funciones de orden superior</li>
+                                                <li>Inmutabilidad y efectos secundarios</li>
+                                                <li>Patrones funcionales comunes</li>
+                                            </ul>
+                                        </li>
+                                        <li>Frameworks y bibliotecas populares
+                                            <ul>
+                                                <li>Spring Framework y Spring Boot</li>
+                                                <li>Hibernate ORM</li>
+                                                <li>JUnit y Mockito para testing</li>
+                                            </ul>
+                                        </li>
+                                        <li>Desarrollo web con Java
+                                            <ul>
+                                                <li>Servlets y JSP</li>
+                                                <li>RESTful APIs con Spring</li>
+                                                <li>Microservicios con Spring Cloud</li>
+                                            </ul>
+                                        </li>
+                                        <li>Optimización y buenas prácticas
+                                            <ul>
+                                                <li>Patrones de diseño en Java</li>
+                                                <li>Profiling y optimización de rendimiento</li>
+                                                <li>Clean Code y principios SOLID</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <div class="mt-4">
+                                        <a href="java avanzado.html" class="btn btn-primary">Ver Contenido del Curso</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-12">
+                            <div class="card">
+                                <div class="card-body d-flex flex-column align-items-center">
+                                    <img src="img/java avanzado.png" alt="Java Avanzado 1" class="level-image mb-4 img-fluid" style="width: 100%; height: auto;">
+                                    <img src="img/java  Lambdas y Streams.png" alt="Java Avanzado 2" class="level-image img-fluid" style="width: 100%; height: auto;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ... (rest of the content remains unchanged) ... -->
+
+                </div>
+            </section>
+        </div>
+
+        <!-- Main Footer -->
+        <footer class="main-footer">
+            <strong>&copy; 2023 Temario de Java.</strong> Todos los derechos reservados.
+        </footer>
+    </div><!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="https://cdn.jsdelivr.net/npm/admin-lte@3.1/dist/js/adminlte.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Verificar si el modo oscuro está activado en localStorage
+            if (localStorage.getItem('darkMode') === 'true') {
+                $('body').addClass('dark-mode');
+                $('.navbar').addClass('navbar-dark').removeClass('navbar-light');
+                $('.card').addClass('bg-dark');
+                $('#darkModeToggle').html('<i class="fas fa-sun"></i> Modo Claro');
+            }
+
+            $('#darkModeToggle').click(function() {
+                $('body').toggleClass('dark-mode');
+                $('.navbar').toggleClass('navbar-dark navbar-light');
+                $('.card').toggleClass('bg-dark');
+                if ($('body').hasClass('dark-mode')) {
+                    $(this).html('<i class="fas fa-sun"></i> Modo Claro');
+                    localStorage.setItem('darkMode', 'true');
+                } else {
+                    $(this).html('<i class="fas fa-moon"></i> Modo Oscuro');
+                    localStorage.setItem('darkMode', 'false');
+                }
+            });
+
+            // Agregar animaciones al cargar la página
+            $('.animate__animated').each(function(i) {
+                var $this = $(this);
+                setTimeout(function() {
+                    $this.removeClass('animate__animated');
+                }, 100 * i);
+            });
+        });
+    </script>
+</body>
+</html>

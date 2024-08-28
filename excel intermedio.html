@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>excel Intermedio</title>
+    <link rel="icon" href="img/ICATI.png" type="image/png">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- AdminLTE CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@3.1/dist/css/adminlte.min.css">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        .dark-mode {
+            background-color: #343a40;
+            color: #ffffff;
+        }
+        .dark-mode .card {
+            background-color: #454d55;
+            color: #ffffff;
+        }
+        .dark-mode .navbar {
+            background-color: #343a40 !important;
+        }
+        .dark-mode .main-footer {
+            background-color: #343a40;
+            color: #ffffff;
+        }
+        @media (max-width: 768px) {
+            .content-wrapper {
+                padding: 15px;
+            }
+            .card {
+                margin-bottom: 20px;
+            }
+        }
+        /* Colores para los iconos */
+        .fa-home { color: #4CAF50; }
+        .fa-file-excel { color: #217346; }
+        .fa-file-word { color: #2B579A; }
+        .fa-java { color: #007396; }
+        .fa-html5 { color: #E34F26; }
+        .fa-css3-alt { color: #1572B6; }
+        .fa-moon, .fa-sun { color: #FFA500; }
+        /* Estilo para hacer que los botones tengan el mismo tamaño */
+        .btn-equal-size {
+            height: 120px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body class="hold-transition sidebar-mini">
+    <div class="wrapper">
+        <!-- Navbar -->
+        <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+            <!-- Left navbar links -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+                </li>
+            </ul>
+            <!-- Right navbar links -->
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item mr-3">
+                    <button id="darkModeToggle" class="btn btn-secondary animate__animated animate__fadeIn">
+                        <i class="fas fa-moon"></i> Modo Oscuro
+                    </button>
+                </li>
+                <li class="nav-item">
+                    <a href="contacto.html" class="btn btn-primary animate__animated animate__fadeIn">
+                        <i class="fas fa-envelope"></i> Contáctanos
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Main Sidebar Container -->
+        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+            <!-- Brand Logo -->
+            <a href="index.html" class="brand-link">
+                <img src="img/ICATI.png" alt="Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+                <span class="brand-text font-weight-light"> Informática</span>
+            </a>
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <!-- Sidebar Menu -->
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">
+                                <i class="nav-icon fas fa-home"></i>
+                                <p>Inicio</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="excel.html" class="nav-link">
+                                <i class="nav-icon fas fa-file-excel"></i>
+                                <p>Excel</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="word.html" class="nav-link">
+                                <i class="nav-icon fas fa-file-word"></i>
+                                <p>Word</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="java.html" class="nav-link">
+                                <i class="nav-icon fab fa-java"></i>
+                                <p>Java</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="html.html" class="nav-link">
+                                <i class="nav-icon fab fa-html5"></i>
+                                <p>HTML</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="css.html" class="nav-link">
+                                <i class="nav-icon fab fa-css3-alt"></i>
+                                <p>CSS</p>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <div class="row">
+                <div class="col-md-9">
+                    <div class="tab-content" id="v-pills-tabContent">
+                        <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                            <div class="card-body">
+                                <iframe width="100%" height="500" src="https://www.youtube.com/embed/videoId1" frameborder="0" allowfullscreen></iframe>
+                                <hr>
+                                <div class="text-center">
+                                    <h2>Tema 1: Introducción a Excel</h2>
+                                    <hr>
+                                    <p>En este tema, exploraremos las bases de Excel, incluyendo la creación de hojas de cálculo, el uso de fórmulas y funciones, y la personalización de gráficos.</p>
+                                    <hr>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <hr>
+                                    <p>Instructor: Juan Pérez, experto en Excel con más de 10 años de experiencia.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                            <div class="card-body">
+                                <iframe width="100%" height="500" src="https://www.youtube.com/embed/videoId2" frameborder="0" allowfullscreen></iframe>
+                                <hr>
+                                <div class="text-center">
+                                    <h2>Tema 2: Funciones Avanzadas de Excel</h2>
+                                    <hr>
+                                    <p>En este tema, profundizaremos en las funciones avanzadas de Excel, incluyendo el uso de fórmulas complejas, el manejo de datos y la creación de gráficos personalizados.</p>
+                                    <hr>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                    <hr>
+                                    <p>Instructor: Carlos Gómez, especialista en análisis de datos con más de 8 años de experiencia.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                            <div class="card-body">
+                                <iframe width="100%" height="500" src="https://www.youtube.com/embed/videoId3" frameborder="0" allowfullscreen></iframe>
+                                <hr>
+                                <div class="text-center">
+                                    <h2>Tema 3: Análisis de Datos con Excel</h2>
+                                    <hr>
+                                    <p>En este tema, exploraremos las herramientas de análisis de datos de Excel, incluyendo el uso de PivotTables, el análisis de tendencias y la visualización de datos.</p>
+                                    <hr>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                    <hr>
+                                    <p>Instructor: Ana Rodríguez, experta en inteligencia de negocios con más de 12 años de experiencia.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+                            <div class="card-body">
+                                <iframe width="100%" height="500" src="https://www.youtube.com/embed/videoId4" frameborder="0" allowfullscreen></iframe>
+                                <hr>
+                                <div class="text-center">
+                                    <h2>Tema 4: Automatización con Macros</h2>
+                                    <hr>
+                                    <p>En este tema, aprenderemos a automatizar tareas repetitivas en Excel utilizando macros, incluyendo la creación de scripts y la programación de tareas.</p>
+                                    <hr>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <hr>
+                                    <p>Instructor: Pedro Sánchez, desarrollador de software con más de 15 años de experiencia.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="v-pills-home2" role="tabpanel" aria-labelledby="v-pills-home2-tab">
+                            <div class="card-body">
+                                <iframe width="100%" height="500" src="https://www.youtube.com/embed/videoId5" frameborder="0" allowfullscreen></iframe>
+                                <hr>
+                                <div class="text-center">
+                                    <h2>Tema 5: Integración con Otras Herramientas</h2>
+                                    <hr>
+                                    <p>En este tema, exploraremos cómo integrar Excel con otras herramientas de Microsoft, incluyendo Word, PowerPoint y Access.</p>
+                                    <hr>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                    <hr>
+                                    <p>Instructor: Sofía García, especialista en integración de sistemas con más de 10 años de experiencia.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="v-pills-profile2" role="tabpanel" aria-labelledby="v-pills-profile2-tab">
+                            <div class="card-body">
+                                <iframe width="100%" height="500" src="https://www.youtube.com/embed/videoId6" frameborder="0" allowfullscreen></iframe>
+                                <hr>
+                                <div class="text-center">
+                                    <h2>Tema 6: Seguridad y Protección de Datos</h2>
+                                    <hr>
+                                    <p>En este tema, abordaremos la seguridad y protección de datos en Excel, incluyendo la criptografía, la autenticación y la autorización.</p>
+                                    <hr>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                    <hr>
+                                    <p>Instructor: Juan Carlos, experto en seguridad de la información con más de 12 años de experiencia.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="v-pills-messages2" role="tabpanel" aria-labelledby="v-pills-messages2-tab">
+                            <div class="card-body">
+                                <iframe width="100%" height="500" src="https://www.youtube.com/embed/videoId7" frameborder="0" allowfullscreen></iframe>
+                                <hr>
+                                <div class="text-center">
+                                    <h2>Tema 7: Creación de Dashboards</h2>
+                                    <hr>
+                                    <p>En este tema, aprenderemos a crear dashboards interactivos en Excel, incluyendo la visualización de datos y la creación de gráficos.</p>
+                                    <hr>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                    <hr>
+                                    <p>Instructor: Laura Martínez, especialista en visualización de datos con más de 8 años de experiencia.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="v-pills-settings2" role="tabpanel" aria-labelledby="v-pills-settings2-tab">
+                            <div class="card-body">
+                                <iframe width="100%" height="500" src="https://www.youtube.com/embed/videoId8" frameborder="0" allowfullscreen></iframe>
+                                <hr>
+                                <div class="text-center">
+                                    <h2>Tema 8: Optimización de Rendimiento</h2>
+                                    <hr>
+                                    <p>En este tema, exploraremos técnicas para optimizar el rendimiento de Excel, incluyendo la mejora de la eficiencia y la reducción del tiempo de carga.</p>
+                                    <hr>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <hr>
+                                    <p>Instructor: Miguel Ángel, especialista en optimización de sistemas con más de 15 años de experiencia.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="v-pills-home3" role="tabpanel" aria-labelledby="v-pills-home3-tab">
+                            <div class="card-body">
+                                <iframe width="100%" height="500" src="https://www.youtube.com/embed/videoId9" frameborder="0" allowfullscreen></iframe>
+                                <hr>
+                                <div class="text-center">
+                                    <h2>Tema 9: Creación de Modelos de Predicción</h2>
+                                    <hr>
+                                    <p>En este tema, aprenderemos a crear modelos de predicción en Excel, incluyendo el uso de análisis de regresión y machine learning.</p>
+                                    <hr>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                    <hr>
+                                    <p>Instructor: Elena González, especialista en inteligencia artificial con más de 10 años de experiencia.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="v-pills-profile3" role="tabpanel" aria-labelledby="v-pills-profile3-tab">
+                            <div class="card-body">
+                                <iframe width="100%" height="500" src="https://www.youtube.com/embed/videoId10" frameborder="0" allowfullscreen></iframe>
+                                <hr>
+                                <div class="text-center">
+                                    <h2>Tema 10: Implementación de Excel en el Trabajo</h2>
+                                    <hr>
+                                    <p>En este tema, exploraremos cómo implementar Excel en el trabajo diario, incluyendo la creación de informes y la automatización de tareas.</p>
+                                    <hr>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                    <hr>
+                                    <p>Instructor: Francisco Javier, consultor de implementación de tecnologías con más de 12 años de experiencia.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                                <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true"><i class="fas fa-book"></i> Tema 1</a>
+                                <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false"><i class="fas fa-book"></i> Tema 2</a>
+                                <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false"><i class="fas fa-book"></i> Tema 3</a>
+                                <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false"><i class="fas fa-book"></i> Tema 4</a>
+                                <a class="nav-link" id="v-pills-home2-tab" data-toggle="pill" href="#v-pills-home2" role="tab" aria-controls="v-pills-home2" aria-selected="false"><i class="fas fa-book"></i> Tema 5</a>
+                                <a class="nav-link" id="v-pills-profile2-tab" data-toggle="pill" href="#v-pills-profile2" role="tab" aria-controls="v-pills-profile2" aria-selected="false"><i class="fas fa-book"></i> Tema 6</a>
+                                <a class="nav-link" id="v-pills-messages2-tab" data-toggle="pill" href="#v-pills-messages2" role="tab" aria-controls="v-pills-messages2" aria-selected="false"><i class="fas fa-book"></i> Tema 7</a>
+                                <a class="nav-link" id="v-pills-settings2-tab" data-toggle="pill" href="#v-pills-settings2" role="tab" aria-controls="v-pills-settings2" aria-selected="false"><i class="fas fa-book"></i> Tema 8</a>
+                                <a class="nav-link" id="v-pills-home3-tab" data-toggle="pill" href="#v-pills-home3" role="tab" aria-controls="v-pills-home3" aria-selected="false"><i class="fas fa-book"></i> Tema 9</a>
+                                <a class="nav-link" id="v-pills-profile3-tab" data-toggle="pill" href="#v-pills-profile3" role="tab" aria-controls="v-pills-profile3" aria-selected="false"><i class="fas fa-book"></i> Tema 10</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            </section>
+
+       
+
+
+        </div>
+
+        <!-- Main Footer -->
+        <footer class="main-footer">
+            <strong>&copy; 2023x| Dashboard de Informática.</strong> Todos los derechos reservados.
+        </footer>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="https://cdn.jsdelivr.net/npm/admin-lte@3.1/dist/js/adminlte.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Verificar si el modo oscuro está activado en localStorage
+            if (localStorage.getItem('darkMode') === 'true') {
+                $('body').addClass('dark-mode');
+                $('.navbar').addClass('navbar-dark').removeClass('navbar-light');
+                $('.card').addClass('bg-dark');
+                $('#darkModeToggle').html('<i class="fas fa-sun"></i> Modo Claro');
+            }
+
+            $('#darkModeToggle').click(function() {
+                $('body').toggleClass('dark-mode');
+                $('.navbar').toggleClass('navbar-dark navbar-light');
+                $('.card').toggleClass('bg-dark');
+                if ($('body').hasClass('dark-mode')) {
+                    $(this).html('<i class="fas fa-sun"></i> Modo Claro');
+                    localStorage.setItem('darkMode', 'true');
+                } else {
+                    $(this).html('<i class="fas fa-moon"></i> Modo Oscuro');
+                    localStorage.setItem('darkMode', 'false');
+                }
+            });
+
+            
+
+            // Agregar animaciones al cargar la página
+            $('.animate__animated').each(function(i) {
+                var $this = $(this);
+                setTimeout(function() {
+                    $this.removeClass('animate__animated');
+                }, 100 * i);
+            });
+        });
+    </script>
+</body>
+</html>
